@@ -181,6 +181,21 @@ namespace HacDesktopApp
                 configWriter.Write(configText);
                 configWriter.Close();
             }
+            else
+            {
+
+                StreamReader configReader = new StreamReader(filePath + "/config.json");
+                string configText = configReader.ReadToEnd();
+                configReader.Close();
+                if (configText.Contains("user") == true)
+                {
+                    configText = configText.Replace("user", Username_text.Text);
+                    configText = configText.Replace("pass", Password_text.Text);
+                }
+                StreamWriter configWriter = new StreamWriter(filePath + "/config.json");
+                configWriter.Write(configText);
+                configWriter.Close();
+            }
         }
     }
 }

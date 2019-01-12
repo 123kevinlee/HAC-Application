@@ -88,7 +88,7 @@ namespace HacDesktopApp
 
         public string GetCounselorFromString(string inputHTML)
         {
-            string startIndexText = "@CRSD.ORG";
+            string startIndexText = ".ORG";
             string endIndexText = "</span>";
 
             int startIndex = inputHTML.LastIndexOf(startIndexText) + startIndexText.Length + 2;
