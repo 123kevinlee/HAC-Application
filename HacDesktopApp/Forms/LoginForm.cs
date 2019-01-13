@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -52,7 +53,7 @@ namespace HacDesktopApp
             progressBar1.Hide();
             try
             {
-                Icon icon = new Icon("Pictures/icon.ico");
+                Icon icon = new Icon(Assembly.GetExecutingAssembly().GetManifestResourceStream("Icon_icofile.ico"));
                 this.Icon = icon;
             }
             catch
