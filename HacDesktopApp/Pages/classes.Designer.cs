@@ -31,25 +31,25 @@
             this.header = new System.Windows.Forms.Label();
             this.className1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.grades1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.grades2 = new System.Windows.Forms.Label();
             this.className2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.grades3 = new System.Windows.Forms.Label();
             this.className3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.className4 = new System.Windows.Forms.Label();
+            this.grades4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.className5 = new System.Windows.Forms.Label();
+            this.grades5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.className6 = new System.Windows.Forms.Label();
+            this.grades6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.className7 = new System.Windows.Forms.Label();
-            this.grades1 = new System.Windows.Forms.Label();
-            this.grades4 = new System.Windows.Forms.Label();
-            this.grades5 = new System.Windows.Forms.Label();
-            this.grades6 = new System.Windows.Forms.Label();
             this.grades7 = new System.Windows.Forms.Label();
-            this.grades2 = new System.Windows.Forms.Label();
-            this.grades3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -90,7 +90,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(205)))), ((int)(((byte)(213)))));
             this.panel1.Controls.Add(this.grades1);
             this.panel1.Controls.Add(this.className1);
             this.panel1.Location = new System.Drawing.Point(32, 108);
@@ -101,9 +101,24 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
+            // grades1
+            // 
+            this.grades1.BackColor = System.Drawing.Color.Transparent;
+            this.grades1.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grades1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
+            this.grades1.Location = new System.Drawing.Point(508, 10);
+            this.grades1.Name = "grades1";
+            this.grades1.Size = new System.Drawing.Size(106, 19);
+            this.grades1.TabIndex = 1;
+            this.grades1.Text = "Grade";
+            this.grades1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.grades1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
+            this.grades1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
+            this.grades1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
+            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(205)))), ((int)(((byte)(213)))));
             this.panel2.Controls.Add(this.grades2);
             this.panel2.Controls.Add(this.className2);
             this.panel2.Location = new System.Drawing.Point(32, 165);
@@ -113,6 +128,21 @@
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
+            // 
+            // grades2
+            // 
+            this.grades2.BackColor = System.Drawing.Color.Transparent;
+            this.grades2.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grades2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
+            this.grades2.Location = new System.Drawing.Point(508, 10);
+            this.grades2.Name = "grades2";
+            this.grades2.Size = new System.Drawing.Size(106, 19);
+            this.grades2.TabIndex = 8;
+            this.grades2.Text = "Grade";
+            this.grades2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.grades2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
+            this.grades2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
+            this.grades2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
             // className2
             // 
@@ -131,7 +161,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(205)))), ((int)(((byte)(213)))));
             this.panel3.Controls.Add(this.grades3);
             this.panel3.Controls.Add(this.className3);
             this.panel3.Location = new System.Drawing.Point(32, 221);
@@ -141,6 +171,21 @@
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.panel3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
+            // 
+            // grades3
+            // 
+            this.grades3.BackColor = System.Drawing.Color.Transparent;
+            this.grades3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grades3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
+            this.grades3.Location = new System.Drawing.Point(508, 10);
+            this.grades3.Name = "grades3";
+            this.grades3.Size = new System.Drawing.Size(106, 19);
+            this.grades3.TabIndex = 9;
+            this.grades3.Text = "Grade";
+            this.grades3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.grades3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
+            this.grades3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
+            this.grades3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
             // className3
             // 
@@ -159,7 +204,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(205)))), ((int)(((byte)(213)))));
             this.panel4.Controls.Add(this.className4);
             this.panel4.Controls.Add(this.grades4);
             this.panel4.Location = new System.Drawing.Point(32, 276);
@@ -185,9 +230,24 @@
             this.className4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.className4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
+            // grades4
+            // 
+            this.grades4.BackColor = System.Drawing.Color.Transparent;
+            this.grades4.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grades4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
+            this.grades4.Location = new System.Drawing.Point(508, 10);
+            this.grades4.Name = "grades4";
+            this.grades4.Size = new System.Drawing.Size(106, 19);
+            this.grades4.TabIndex = 2;
+            this.grades4.Text = "Grade";
+            this.grades4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.grades4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
+            this.grades4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
+            this.grades4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
+            // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(205)))), ((int)(((byte)(213)))));
             this.panel5.Controls.Add(this.className5);
             this.panel5.Controls.Add(this.grades5);
             this.panel5.Location = new System.Drawing.Point(32, 332);
@@ -213,9 +273,24 @@
             this.className5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.className5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
+            // grades5
+            // 
+            this.grades5.BackColor = System.Drawing.Color.Transparent;
+            this.grades5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grades5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
+            this.grades5.Location = new System.Drawing.Point(508, 10);
+            this.grades5.Name = "grades5";
+            this.grades5.Size = new System.Drawing.Size(106, 19);
+            this.grades5.TabIndex = 3;
+            this.grades5.Text = "Grade";
+            this.grades5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.grades5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
+            this.grades5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
+            this.grades5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
+            // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(205)))), ((int)(((byte)(213)))));
             this.panel6.Controls.Add(this.className6);
             this.panel6.Controls.Add(this.grades6);
             this.panel6.Location = new System.Drawing.Point(32, 389);
@@ -241,9 +316,24 @@
             this.className6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.className6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
+            // grades6
+            // 
+            this.grades6.BackColor = System.Drawing.Color.Transparent;
+            this.grades6.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grades6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
+            this.grades6.Location = new System.Drawing.Point(508, 10);
+            this.grades6.Name = "grades6";
+            this.grades6.Size = new System.Drawing.Size(106, 19);
+            this.grades6.TabIndex = 4;
+            this.grades6.Text = "Grade";
+            this.grades6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.grades6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
+            this.grades6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
+            this.grades6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
+            // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(205)))), ((int)(((byte)(213)))));
             this.panel7.Controls.Add(this.className7);
             this.panel7.Controls.Add(this.grades7);
             this.panel7.Location = new System.Drawing.Point(32, 445);
@@ -269,66 +359,6 @@
             this.className7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.className7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
-            // grades1
-            // 
-            this.grades1.BackColor = System.Drawing.Color.Transparent;
-            this.grades1.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grades1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
-            this.grades1.Location = new System.Drawing.Point(508, 10);
-            this.grades1.Name = "grades1";
-            this.grades1.Size = new System.Drawing.Size(106, 19);
-            this.grades1.TabIndex = 1;
-            this.grades1.Text = "Grade";
-            this.grades1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.grades1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
-            this.grades1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
-            this.grades1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
-            // 
-            // grades4
-            // 
-            this.grades4.BackColor = System.Drawing.Color.Transparent;
-            this.grades4.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grades4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
-            this.grades4.Location = new System.Drawing.Point(508, 10);
-            this.grades4.Name = "grades4";
-            this.grades4.Size = new System.Drawing.Size(106, 19);
-            this.grades4.TabIndex = 2;
-            this.grades4.Text = "Grade";
-            this.grades4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.grades4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
-            this.grades4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
-            this.grades4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
-            // 
-            // grades5
-            // 
-            this.grades5.BackColor = System.Drawing.Color.Transparent;
-            this.grades5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grades5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
-            this.grades5.Location = new System.Drawing.Point(508, 10);
-            this.grades5.Name = "grades5";
-            this.grades5.Size = new System.Drawing.Size(106, 19);
-            this.grades5.TabIndex = 3;
-            this.grades5.Text = "Grade";
-            this.grades5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.grades5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
-            this.grades5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
-            this.grades5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
-            // 
-            // grades6
-            // 
-            this.grades6.BackColor = System.Drawing.Color.Transparent;
-            this.grades6.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grades6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
-            this.grades6.Location = new System.Drawing.Point(508, 10);
-            this.grades6.Name = "grades6";
-            this.grades6.Size = new System.Drawing.Size(106, 19);
-            this.grades6.TabIndex = 4;
-            this.grades6.Text = "Grade";
-            this.grades6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.grades6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
-            this.grades6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
-            this.grades6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
-            // 
             // grades7
             // 
             this.grades7.BackColor = System.Drawing.Color.Transparent;
@@ -343,36 +373,6 @@
             this.grades7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
             this.grades7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.grades7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
-            // 
-            // grades2
-            // 
-            this.grades2.BackColor = System.Drawing.Color.Transparent;
-            this.grades2.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grades2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
-            this.grades2.Location = new System.Drawing.Point(508, 10);
-            this.grades2.Name = "grades2";
-            this.grades2.Size = new System.Drawing.Size(106, 19);
-            this.grades2.TabIndex = 8;
-            this.grades2.Text = "Grade";
-            this.grades2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.grades2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
-            this.grades2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
-            this.grades2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
-            // 
-            // grades3
-            // 
-            this.grades3.BackColor = System.Drawing.Color.Transparent;
-            this.grades3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grades3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(93)))));
-            this.grades3.Location = new System.Drawing.Point(508, 10);
-            this.grades3.Name = "grades3";
-            this.grades3.Size = new System.Drawing.Size(106, 19);
-            this.grades3.TabIndex = 9;
-            this.grades3.Text = "Grade";
-            this.grades3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.grades3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
-            this.grades3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
-            this.grades3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
             // classes
             // 

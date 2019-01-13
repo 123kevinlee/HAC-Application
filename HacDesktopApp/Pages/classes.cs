@@ -25,8 +25,8 @@ namespace HacDesktopApp.Pages
             Config Config = LoadJson();
             Request.LoginPost("https://esp41pehac.eschoolplus.powerschool.com/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2fClasses", Config, Cookies);
 
-            if (Config.ClassUrl1 == "classurl1")
-            {
+            //if (Config.ClassUrl1 == "classurl1")
+            //{
                 #region getClassURLS
                 string pageSource = Request.GetClassID(Cookies);
                 List<string> classIDs = Parser.GetClassIDsFromString(pageSource);
@@ -46,7 +46,6 @@ namespace HacDesktopApp.Pages
                     {
                         string classId = classID;
                         classId = classId.Remove(classId.IndexOf("|"));
-                        //https://esp41pehac.eschoolplus.powerschool.com/HomeAccess/Content/Student/ClassworkAverages.aspx?section_key=123123&course_session=1&rc_run=2
                         configInfo += $"\n\"ClassUrl{classNumber}\": \"https://esp41pehac.eschoolplus.powerschool.com/HomeAccess/Content/Student/ClassworkAverages.aspx?section_key=" + classId + "&course_session=1&rc_run=2\",";
                     }
                     classNumber++;
@@ -56,8 +55,8 @@ namespace HacDesktopApp.Pages
                 StreamWriter configWriter = new StreamWriter(filePath + "/config.json");
                 configWriter.Write(configInfo);
                 configWriter.Close();
-                #endregion
-            }
+            #endregion
+            //}
 
             #region GetAndDisplayGrades
             //string[] classURLS = new string[] { Config.ClassUrl1, Config.ClassUrl2, Config.ClassUrl3, Config.ClassUrl4, Config.ClassUrl5, Config.ClassUrl6, Config.ClassUrl7 };
@@ -70,6 +69,8 @@ namespace HacDesktopApp.Pages
             //    grades[i] = Parser.GetGradePercentFromString(gradesource);
             //    classNames[i] = Parser.GetClassNameFromString(gradesource);
             //}
+            //MessageBox.Show(Config.ClassUrl1);
+            Config = LoadJson();
             string GradeSource = Request.viewGradeAverage(Cookies, Config.ClassUrl1);
             grades1.Text = Parser.GetGradePercentFromString(GradeSource);
             className1.Text = Parser.GetClassNameFromString(GradeSource);
@@ -128,7 +129,7 @@ namespace HacDesktopApp.Pages
             if (mouseDown)
             {
                 ParentForm.Location = new Point(
-                    (ParentForm.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                    (ParentForm.Location.X - lastLocation.X) + e.X, (ParentForm.Location.Y - lastLocation.Y) + e.Y);
 
                 ParentForm.Update();
             }
