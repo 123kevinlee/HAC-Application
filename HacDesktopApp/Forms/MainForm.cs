@@ -61,7 +61,7 @@ namespace HacDesktopApp
             Flag.Height = home_button.Height;
             Flag.Top = home_button.Top;
    
-            home1.BringToFront();
+            home2.BringToFront();
             //MessageBox.Show(Directory.)
             //StreamWriter testWriter = new StreamWriter(filePath + "/testwriter.txt");
             //testWriter.Write("this is a test");

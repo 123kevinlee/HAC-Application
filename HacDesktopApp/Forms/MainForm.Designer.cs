@@ -38,9 +38,8 @@
             this.home_button = new System.Windows.Forms.Button();
             this.TopRightCorner = new System.Windows.Forms.Panel();
             this.CornerName = new System.Windows.Forms.Label();
-            this.home2 = new HacDesktopApp.home();
-            this.home1 = new HacDesktopApp.home();
             this.classes1 = new HacDesktopApp.Pages.classes();
+            this.home2 = new HacDesktopApp.home();
             this.SideBar.SuspendLayout();
             this.TopRightCorner.SuspendLayout();
             this.SuspendLayout();
@@ -215,37 +214,24 @@
             this.CornerName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.CornerName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
-            // home2
-            // 
-            this.home2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.home2.Location = new System.Drawing.Point(273, 0);
-            this.home2.Name = "home2";
-            this.home2.Size = new System.Drawing.Size(690, 530);
-            this.home2.TabIndex = 4;
-            this.home2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
-            this.home2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
-            this.home2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
-            // 
-            // home1
-            // 
-            this.home1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.home1.Location = new System.Drawing.Point(273, 0);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(683, 525);
-            this.home1.TabIndex = 2;
-            this.home1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
-            this.home1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
-            this.home1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
-            // 
             // classes1
             // 
-            this.classes1.Location = new System.Drawing.Point(273, 0);
+            this.classes1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.classes1.Location = new System.Drawing.Point(266, -1);
             this.classes1.Name = "classes1";
             this.classes1.Size = new System.Drawing.Size(690, 530);
-            this.classes1.TabIndex = 3;
+            this.classes1.TabIndex = 2;
             this.classes1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
             this.classes1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.classes1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
+            // 
+            // home2
+            // 
+            this.home2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.home2.Location = new System.Drawing.Point(266, -3);
+            this.home2.Name = "home2";
+            this.home2.Size = new System.Drawing.Size(690, 530);
+            this.home2.TabIndex = 1;
             // 
             // MainForm
             // 
@@ -255,8 +241,8 @@
             this.ClientSize = new System.Drawing.Size(956, 525);
             this.ControlBox = false;
             this.Controls.Add(this.SideBar);
-            this.Controls.Add(this.home2);
             this.Controls.Add(this.classes1);
+            this.Controls.Add(this.home2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.ShowIcon = false;
@@ -283,7 +269,6 @@
         private System.Windows.Forms.Button class_button;
         private System.Windows.Forms.Panel Flag;
         private System.Windows.Forms.Button exit_button;
-        private home home1;
         private home home2;
         private Pages.classes classes1;
     }

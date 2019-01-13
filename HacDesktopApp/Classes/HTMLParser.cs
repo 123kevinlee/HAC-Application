@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HtmlAgilityPack;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -143,6 +144,26 @@ namespace HacDesktopApp
             }
 
             return className;
+        }
+
+        public List<string> GetClassIDsFromString(string html)
+        {
+            //string[] classIDs = new string[7];
+            HtmlDocument htmlDoc = new HtmlDocument();
+            HtmlNode.ElementsFlags.Remove("option");
+            htmlDoc.LoadHtml(html);
+
+            List<string> classIDs = new List<string>();
+
+            foreach (HtmlNode node in htmlDoc.DocumentNode.SelectNodes("//select[@id='plnMain_ddlClasses']//option"))
+            {
+                //Console.WriteLine("Value=" + node.Attributes["value"].Value);
+                //Console.WriteLine("InnerText=" + node.InnerText);
+                //Console.WriteLine();
+                classIDs.Add(node.Attributes["value"].Value);
+            }
+            return classIDs;
+            //return classIDs;
         }
     }
 }

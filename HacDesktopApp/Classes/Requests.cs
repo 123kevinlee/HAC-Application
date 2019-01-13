@@ -12,7 +12,7 @@ namespace HacDesktopApp
     class Requests
     {
         private string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/HACViewer";
-        
+
         private CookieContainer container = new CookieContainer();
 
         public void LoginPost(string url, Config config, CookieContainer container)
@@ -95,7 +95,7 @@ namespace HacDesktopApp
             return responseString;
         }
 
-        public void viewGradeAverage(CookieContainer container, string averageUrl)
+        public string viewGradeAverage(CookieContainer container, string averageUrl)
         {
             CookieContainer cookies = container;
 
@@ -105,27 +105,7 @@ namespace HacDesktopApp
             var response = (HttpWebResponse)request.GetResponse();
 
             var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
-            //Console.WriteLine(responseString);
-
-            //StreamWriter writer = new StreamWriter("info.txt");
-            //writer.Write(responseString);
-            //writer.Close();
-            //response.Close();
-            ////Console.WriteLine("HTML written to info.txt");
-
-            //StreamReader reader = new StreamReader("info.txt");
-            string grade = string.Empty;
-            string className = string.Empty;
-            //string input = reader.ReadToEnd();
-            //reader.Close();
-            HTMLParser parser = new HTMLParser();
-            grade = parser.GetGradePercentFromString(responseString);
-            className = parser.GetClassNameFromString(responseString);
-
-            //reader.Close();
-            className = className.Trim();
-            Console.WriteLine(className + ": " + grade);
-            //Console.WriteLine(responseString);
+            return responseString;
         }
 
         public void getClasspageSource(CookieContainer container)
@@ -142,6 +122,18 @@ namespace HacDesktopApp
             StreamWriter classWriter = new StreamWriter(filePath + "/tempFile.txt");
             classWriter.Write(responseString);
             classWriter.Close();
+        }
+
+        public string GetClassID(CookieContainer container)
+        {
+            var request = (HttpWebRequest)WebRequest.Create("https://esp41pehac.eschoolplus.powerschool.com/HomeAccess/Content/Student/Assignments.aspx");
+            request.Method = "GET";
+            request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36";
+            request.CookieContainer = container;
+            var response = (HttpWebResponse)request.GetResponse();
+            string responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+            response.Close();
+            return responseString;
         }
     }
 }
