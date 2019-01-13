@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,7 @@ namespace HacDesktopApp
     {
         public LoginForm()
         {
+            
             string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/HACViewer";
             try
             {
@@ -45,8 +47,9 @@ namespace HacDesktopApp
                 createFiles.Write(configInfo);
                 createFiles.Close();
             }
-
+            
             InitializeComponent();
+            progressBar1.Hide();
             try
             {
                 Icon icon = new Icon("Pictures/icon.ico");
@@ -77,22 +80,82 @@ namespace HacDesktopApp
             //Request Client
             Requests Request = new Requests();
             bool Success = Request.CheckCredentials("https://esp41pehac.eschoolplus.powerschool.com/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2fClasses",Username_text.Text, Password_text.Text, Cookies);
-            //MessageBox.Show(Password_text.Text + Username_text.Text);
+   
             if (Success)
             {
-                Status_label.Text = "Logged In!";
+                label1.Select();
+                Exit.Hide();
+                login_button.Hide();
+                Status_label.Top = progressBar1.Bottom;
+                Username_text.ReadOnly = true;
+                Password_text.ReadOnly = true;
+                progressBar1.BringToFront();
+                progressBar1.Show();
+                Status_label.ForeColor = Color.DodgerBlue;
+                Status_label.Text = "Checking Credentials";
                 Remember();
-
-                MainForm mainForm = new MainForm();
-                this.Hide();
-                mainForm.ShowDialog();
-                this.Close();
+                Thread NewForm = new Thread(new ThreadStart(CreateForm));
+                NewForm.Start();
+                InitializeMyTimer();
             }
             else
             {
                 Status_label.Text = "Login Failed.";
             }
         }
+
+        private System.Windows.Forms.Timer time = new System.Windows.Forms.Timer();
+
+        private void InitializeMyTimer()
+        {
+            // Set the interval for the timer.
+            time.Interval = 30;
+            // Connect the Tick event of the timer to its event handler.
+            time.Tick += new EventHandler(IncreaseProgressBar);
+            // Start the timer.
+            time.Start();
+        }
+
+        private void IncreaseProgressBar(object sender, EventArgs e)
+        {
+            progressBar1.Maximum = 160;
+     
+            progressBar1.Increment(1);
+
+            if (progressBar1.Value == progressBar1.Maximum)
+            {
+                time.Stop();
+            }
+
+            switch (progressBar1.Value)
+            {
+                case 20:
+                    Status_label.Text = "Credentials Correct!";
+                    break;
+                case 60:
+                    Status_label.Text = "Logging In";
+                    break;
+                case 95:
+                    Status_label.Text = "Collecting Information";
+                    break;
+                case 145:
+                    Status_label.Text = "Opening";
+                    break;
+            }
+        }
+
+        private void CreateForm()
+        {
+            MainForm mainForm = new MainForm();
+            if (progressBar1.Value >= progressBar1.Maximum - 15)
+            {
+                this.Close();
+                mainForm.ShowDialog();
+                Application.EnableVisualStyles();
+            }
+            
+        }
+
         static Config LoadJson()
         {
             string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/HACViewer";

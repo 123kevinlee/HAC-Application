@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,7 +16,7 @@ namespace HacDesktopApp
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             //string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/HACViewer";
@@ -47,8 +48,14 @@ namespace HacDesktopApp
             //    createFiles.Close();
             //}
 
-            Application.Run(new LoginForm());
+            Thread Start = new Thread(new ThreadStart(Launch));
+            Start.Start();
+            
 
+        }
+        public static void Launch()
+        {
+            Application.Run(new LoginForm());
         }
     }
 }

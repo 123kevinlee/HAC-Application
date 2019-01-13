@@ -40,6 +40,7 @@
             this.Credit = new System.Windows.Forms.Label();
             this.remember = new System.Windows.Forms.CheckBox();
             this.Reveal_button = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             this.Status_label.AutoSize = true;
             this.Status_label.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Status_label.ForeColor = System.Drawing.Color.Red;
-            this.Status_label.Location = new System.Drawing.Point(27, 326);
+            this.Status_label.Location = new System.Drawing.Point(24, 326);
             this.Status_label.Name = "Status_label";
             this.Status_label.Size = new System.Drawing.Size(59, 17);
             this.Status_label.TabIndex = 1;
@@ -197,6 +198,15 @@
             this.Reveal_button.UseVisualStyleBackColor = false;
             this.Reveal_button.Click += new System.EventHandler(this.Reveal_button_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.BackColor = System.Drawing.Color.White;
+            this.progressBar1.Location = new System.Drawing.Point(26, 314);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(275, 37);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 11;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +223,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Status_label);
             this.Controls.Add(this.login_button);
+            this.Controls.Add(this.progressBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -241,5 +252,6 @@
         private System.Windows.Forms.Label Credit;
         private System.Windows.Forms.CheckBox remember;
         private System.Windows.Forms.Button Reveal_button;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

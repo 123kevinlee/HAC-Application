@@ -232,6 +232,9 @@
             this.home2.Name = "home2";
             this.home2.Size = new System.Drawing.Size(690, 530);
             this.home2.TabIndex = 1;
+            this.home2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
+            this.home2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
+            this.home2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
             // MainForm
             // 
@@ -241,8 +244,8 @@
             this.ClientSize = new System.Drawing.Size(956, 525);
             this.ControlBox = false;
             this.Controls.Add(this.SideBar);
-            this.Controls.Add(this.classes1);
             this.Controls.Add(this.home2);
+            this.Controls.Add(this.classes1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.ShowIcon = false;
