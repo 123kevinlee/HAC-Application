@@ -17,8 +17,10 @@ namespace HacDesktopApp.Pages
     {
         public classes()
         {
-            InitializeComponent();
+            ConfigCreator ConfigCreator = new ConfigCreator();
+            ConfigCreator.CreateConfigFile();
 
+            InitializeComponent(); 
             Requests Request = new Requests();
             HTMLParser Parser = new HTMLParser();
             CookieContainer Cookies = new CookieContainer();

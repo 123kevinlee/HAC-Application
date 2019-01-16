@@ -126,9 +126,7 @@ namespace HacDesktopApp
             int substringLength = endIndex - startIndex;
 
             string unformattedClassName = inputHTML.Substring(startIndex, substringLength);
-            //className = new string(className.Where(char.IsLetter).ToArray());  
-            //Above line cut out everything but letters, including spaces
-            //Below keeps the spaces between letters
+
             string className = string.Empty;
             foreach (char index in unformattedClassName)
             {
@@ -148,7 +146,6 @@ namespace HacDesktopApp
 
         public List<string> GetClassIDsFromString(string html)
         {
-            //string[] classIDs = new string[7];
             HtmlDocument htmlDoc = new HtmlDocument();
             HtmlNode.ElementsFlags.Remove("option");
             htmlDoc.LoadHtml(html);
@@ -157,13 +154,9 @@ namespace HacDesktopApp
 
             foreach (HtmlNode node in htmlDoc.DocumentNode.SelectNodes("//select[@id='plnMain_ddlClasses']//option"))
             {
-                //Console.WriteLine("Value=" + node.Attributes["value"].Value);
-                //Console.WriteLine("InnerText=" + node.InnerText);
-                //Console.WriteLine();
                 classIDs.Add(node.Attributes["value"].Value);
             }
             return classIDs;
-            //return classIDs;
         }
     }
 }

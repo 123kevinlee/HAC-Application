@@ -17,7 +17,6 @@ namespace HacDesktopApp
 
         public void LoginPost(string url, Config config, CookieContainer container)
         {
-            //this.container = container;
             //Default URL: https://esp41pehac.eschoolplus.powerschool.com/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess%2fClasses
             var request = (HttpWebRequest)WebRequest.Create(url);
             CookieContainer cookies = container;

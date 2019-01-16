@@ -38,8 +38,8 @@
             this.home_button = new System.Windows.Forms.Button();
             this.TopRightCorner = new System.Windows.Forms.Panel();
             this.CornerName = new System.Windows.Forms.Label();
-            this.classes1 = new HacDesktopApp.Pages.classes();
-            this.home2 = new HacDesktopApp.home();
+            this.classPage = new HacDesktopApp.Pages.classes();
+            this.homePage = new HacDesktopApp.home();
             this.SideBar.SuspendLayout();
             this.TopRightCorner.SuspendLayout();
             this.SuspendLayout();
@@ -214,27 +214,27 @@
             this.CornerName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.CornerName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
-            // classes1
+            // classPage
             // 
-            this.classes1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.classes1.Location = new System.Drawing.Point(266, -1);
-            this.classes1.Name = "classes1";
-            this.classes1.Size = new System.Drawing.Size(690, 530);
-            this.classes1.TabIndex = 2;
-            this.classes1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
-            this.classes1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
-            this.classes1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
+            this.classPage.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.classPage.Location = new System.Drawing.Point(266, -1);
+            this.classPage.Name = "classPage";
+            this.classPage.Size = new System.Drawing.Size(690, 530);
+            this.classPage.TabIndex = 2;
+            this.classPage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
+            this.classPage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
+            this.classPage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
-            // home2
+            // homePage
             // 
-            this.home2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.home2.Location = new System.Drawing.Point(266, -3);
-            this.home2.Name = "home2";
-            this.home2.Size = new System.Drawing.Size(690, 530);
-            this.home2.TabIndex = 1;
-            this.home2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
-            this.home2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
-            this.home2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
+            this.homePage.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.homePage.Location = new System.Drawing.Point(266, -3);
+            this.homePage.Name = "homePage";
+            this.homePage.Size = new System.Drawing.Size(690, 530);
+            this.homePage.TabIndex = 1;
+            this.homePage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
+            this.homePage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
+            this.homePage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
             // MainForm
             // 
@@ -244,8 +244,8 @@
             this.ClientSize = new System.Drawing.Size(956, 525);
             this.ControlBox = false;
             this.Controls.Add(this.SideBar);
-            this.Controls.Add(this.home2);
-            this.Controls.Add(this.classes1);
+            this.Controls.Add(this.homePage);
+            this.Controls.Add(this.classPage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.ShowIcon = false;
@@ -272,8 +272,8 @@
         private System.Windows.Forms.Button class_button;
         private System.Windows.Forms.Panel Flag;
         private System.Windows.Forms.Button exit_button;
-        private home home2;
-        private Pages.classes classes1;
+        private home homePage;
+        private Pages.classes classPage;
     }
 }
 

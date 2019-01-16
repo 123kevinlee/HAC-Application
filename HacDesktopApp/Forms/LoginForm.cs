@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using HacDesktopApp.Classes;
 
 namespace HacDesktopApp
 {
@@ -19,36 +20,10 @@ namespace HacDesktopApp
     {
         public LoginForm()
         {
-            
             string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/HACViewer";
-            try
-            {
-                System.IO.Directory.GetDirectories(filePath);
-            }
-            catch
-            {
-                System.IO.Directory.CreateDirectory(filePath);
-                StreamWriter createFiles = new StreamWriter(filePath + "/config.json");
-                #region configFileString
-                string configInfo =
-                "{" +
-                "\n\"Database\": \"50\"," +
-                "\n\"Username\": \"user\"," +
-                "\n\"Pass\": \"pass\"," +
-                "\n\"ClassUrl1\": \"classurl1\"," +
-                "\n\"ClassUrl2\": \"classurl2\"," +
-                "\n\"ClassUrl3\": \"classurl3\"," +
-                "\n\"ClassUrl4\": \"classurl4\"," +
-                "\n\"ClassUrl5\": \"classurl5\"," +
-                "\n\"ClassUrl6\": \"classurl6\"," +
-                "\n\"ClassUrl7\": \"classurl7\"," +
-                "\n\"Rem\": \"no\"" +
-                "\n}";
-                #endregion
-                createFiles.Write(configInfo);
-                createFiles.Close();
-            }
-            
+            ConfigCreator ConfigCreator = new ConfigCreator();
+            ConfigCreator.CreateConfigFile();
+
             InitializeComponent();
             progressBar1.Hide();
             try
@@ -60,7 +35,9 @@ namespace HacDesktopApp
             {
                 //no icon directory file found
             }
+
             Status_label.Text = "";
+
             //Read Config
             Config Config = LoadJson();
             if (Config.Rem == "yes")
@@ -128,19 +105,20 @@ namespace HacDesktopApp
                 time.Stop();
             }
 
+            string[] loadingMessages = new string[4] { "Credentials Correct!", "Logging In", "Collecting Information", "Opening Application" };
             switch (progressBar1.Value)
             {
                 case 20:
-                    Status_label.Text = "Credentials Correct!";
+                    Status_label.Text = loadingMessages[0];
                     break;
                 case 60:
-                    Status_label.Text = "Logging In";
+                    Status_label.Text = loadingMessages[1];
                     break;
                 case 95:
-                    Status_label.Text = "Collecting Information";
+                    Status_label.Text = loadingMessages[2];
                     break;
                 case 145:
-                    Status_label.Text = "Opening";
+                    Status_label.Text = loadingMessages[3];
                     break;
             }
         }
