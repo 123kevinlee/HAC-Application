@@ -101,5 +101,11 @@ namespace HacDesktopApp
             Flag.Height = calendar.Height;
             Flag.Top = calendar.Top;
         }
+
+        private void Tools_button_Click(object sender, EventArgs e)
+        {
+            Flag.Height = Tools_button.Height;
+            Flag.Top = Tools_button.Top;
+        }
     }
 }

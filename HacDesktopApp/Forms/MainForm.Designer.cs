@@ -33,7 +33,7 @@
             this.Flag = new System.Windows.Forms.Panel();
             this.calendar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Tools_button = new System.Windows.Forms.Button();
             this.class_button = new System.Windows.Forms.Button();
             this.home_button = new System.Windows.Forms.Button();
             this.TopRightCorner = new System.Windows.Forms.Panel();
@@ -51,7 +51,7 @@
             this.SideBar.Controls.Add(this.Flag);
             this.SideBar.Controls.Add(this.calendar);
             this.SideBar.Controls.Add(this.button4);
-            this.SideBar.Controls.Add(this.button3);
+            this.SideBar.Controls.Add(this.Tools_button);
             this.SideBar.Controls.Add(this.class_button);
             this.SideBar.Controls.Add(this.home_button);
             this.SideBar.Controls.Add(this.TopRightCorner);
@@ -129,24 +129,25 @@
             this.button4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
             this.button4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
-            // button3
+            // Tools_button
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(124)))));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 253);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(273, 80);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Menu 2";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
-            this.button3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
-            this.button3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
+            this.Tools_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(124)))));
+            this.Tools_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Tools_button.FlatAppearance.BorderSize = 0;
+            this.Tools_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Tools_button.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tools_button.ForeColor = System.Drawing.Color.White;
+            this.Tools_button.Location = new System.Drawing.Point(0, 253);
+            this.Tools_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Tools_button.Name = "Tools_button";
+            this.Tools_button.Size = new System.Drawing.Size(273, 80);
+            this.Tools_button.TabIndex = 4;
+            this.Tools_button.Text = "Tools";
+            this.Tools_button.UseVisualStyleBackColor = false;
+            this.Tools_button.Click += new System.EventHandler(this.Tools_button_Click);
+            this.Tools_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseDown);
+            this.Tools_button.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseMove);
+            this.Tools_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Draggable_MouseUp);
             // 
             // class_button
             // 
@@ -268,7 +269,7 @@
         private System.Windows.Forms.Button home_button;
         private System.Windows.Forms.Button calendar;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Tools_button;
         private System.Windows.Forms.Button class_button;
         private System.Windows.Forms.Panel Flag;
         private System.Windows.Forms.Button exit_button;
